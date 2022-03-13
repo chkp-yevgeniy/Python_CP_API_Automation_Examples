@@ -1,0 +1,17 @@
+{
+  "objects": [
+    {
+      "name": "gateway1",
+      "comments": "my_comment for gw1"
+    },
+    {
+      "name": "gateway2",
+      "comments": "my_commenttt for gw2"
+    },
+    {
+      "name": "gwR8030",
+      "comments": "my_commenttt for gwR8030"
+    }
+  ],
+  "total": "3"
+}
