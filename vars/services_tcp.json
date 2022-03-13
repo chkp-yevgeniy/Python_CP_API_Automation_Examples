@@ -1,0 +1,23 @@
+{
+  "objects": [
+    {
+      "name": "tcp_10000",
+      "port": 1000
+      "type": "service-tcp"
+      "comments": "tcp_10000"
+    },
+    {
+      "name": "tcp_10000",
+      "port": 1000
+      "type": "service-tcp"
+      "comments": "tcp_10000"
+    },
+    {
+      "name": "tcp_10000",
+      "port": 1000
+      "type": "service-tcp"
+      "comments": "tcp_10000"
+    },
+  ],
+  "total": "3"
+}

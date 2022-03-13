@@ -24,6 +24,7 @@ sys.path.append(os.path.abspath(os.path.join(project_path, 'libs/cp_mgmt_api_pyt
 # Import CP API lib
 from cpapi import APIClient, APIClientArgs
 
+
 # Functions section
 
 def write_list_of_dicst_into_csv(_my_dicts_list, _csv_file_name):
@@ -48,8 +49,8 @@ def fill_api_calls_res(_api_calls_res_d_l, _api_call_d, _api_res_d_success):
 def main():
     
     # Timestamp
-    cur_date_time_YMD_HMS=os.popen('date +%Y%m%d_%H%M%S').read().strip()  
-    
+    cur_date_time_YMD_HMS=os.popen('date +%Y%m%d_%H%M%S').read().strip()      
+
     # Variables 
     conf_d={}
     conf_d["mgmt_ip"]="192.168.168.100"
@@ -70,6 +71,11 @@ def main():
     conf_d["gws_list_to_be_conf"]="vars/gws.json"
     # pprint.pprint(conf_d)
     #     
+
+    # Create folder
+    newpath = 'collected_data' 
+    if not os.path.exists(newpath):
+      os.makedirs(newpath)
 
     print("### ### Start tool ### ###")
     

@@ -72,8 +72,11 @@ def main():
     conf_d["report_file_json_ts"]=conf_d["report_file_json"].replace(".json", "_"+cur_date_time_YMD_HMS+".json")
     conf_d["report_file_csv_ts"]=conf_d["report_file_csv"].replace(".csv", "_"+cur_date_time_YMD_HMS+".csv")
 
-    # pprint.pprint(conf_d)
-    # exit()
+    # Create folder
+    newpath = 'collected_data' 
+    if not os.path.exists(newpath):
+      os.makedirs(newpath)
+
 
     print("### ### Start tool ### ###")
     
