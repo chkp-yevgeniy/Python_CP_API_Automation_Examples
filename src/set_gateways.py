@@ -53,10 +53,10 @@ def main():
 
     # Variables 
     conf_d={}
-    conf_d["mgmt_ip"]="192.168.168.100"
+    conf_d["mgmt_ip"]="203.0.113.80"
     conf_d["mgmt_user"]="api_user"
     conf_d["mgmt_pwd"]="vpn123"
-    conf_d["domain"]="CMA1"
+    conf_d["domain"]=""
     conf_d["reports_folder"]="collected_data"
     conf_d["report_file_json"]=os.path.join(conf_d["reports_folder"], "gws.json")
     conf_d["report_file_csv"]=os.path.join(conf_d["reports_folder"], "gws.csv")
