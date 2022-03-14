@@ -82,8 +82,8 @@ def main():
     print("### ### Start tool ### ###")
 
 
-    # print("--- 10 Get services")    
-    # get_services_tcp.my_main(conf_d)
+    print("--- 10 Get services")    
+    get_services_tcp.my_main(conf_d)
 
 
     print("--- 20 Add services")    
