@@ -114,7 +114,10 @@ def main():
 
 
       print("--- 40. Execute api call PUBLISH")    
-      api_res_d = client.api_call("publish", "{}")
+      api_call_d={}
+      api_call_d["name"]="publish"
+      api_call_d["body"]={}
+      api_res_d = client.api_call(api_call_d["name"], "{}")
       #pprint.pprint(api_res_d)      
       # Evaluate api_call result
       print("API call result: "+str(api_res_d.success))        
@@ -122,8 +125,7 @@ def main():
       fill_api_calls_res(api_calls_res_d_l, api_call_d, api_res_d.success)
       
 
-    print("--- 50. Process on result")
-    
+    print("--- 50. Process on result")    
     # Get statistics
     stats_d={}
     stats_d["api_calls_total"]=str(len(api_calls_res_d_l))

@@ -20,7 +20,7 @@ project_path=pathlib.Path().absolute()
 sys.path.append(os.path.abspath(os.path.join(project_path, 'src')))
 sys.path.append(os.path.abspath(os.path.join(project_path, 'libs/cp_mgmt_api_python_sdk')))
 sys.path.append(os.path.abspath(os.path.join(project_path, 'src/modules')))
-print("sys.path: "+str(sys.path))
+#print("sys.path: "+str(sys.path))
 
 # Import CP API lib
 from cpapi import APIClient, APIClientArgs
@@ -55,10 +55,10 @@ def main():
 
     # Variables 
     conf_d={}
-    conf_d["mgmt_ip"]="192.168.168.100"
+    conf_d["mgmt_ip"]="203.0.113.80"
     conf_d["mgmt_user"]="api_user"
     conf_d["mgmt_pwd"]="vpn123"
-    conf_d["domain"]="CMA1"
+    conf_d["domain"]=""
     conf_d["reports_folder"]="collected_data"
     conf_d["report_file_json"]=os.path.join(conf_d["reports_folder"], "gws.json")
     conf_d["report_file_csv"]=os.path.join(conf_d["reports_folder"], "gws.csv")
@@ -82,8 +82,8 @@ def main():
     print("### ### Start tool ### ###")
 
 
-    print("--- 10 Get services")    
-    get_services_tcp.my_main(conf_d)
+    # print("--- 10 Get services")    
+    # get_services_tcp.my_main(conf_d)
 
 
     print("--- 20 Add services")    

@@ -21,8 +21,6 @@ project_path=pathlib.Path().absolute()
 sys.path.append(os.path.abspath(os.path.join(project_path, 'src')))
 sys.path.append(os.path.abspath(os.path.join(project_path, 'libs/cp_mgmt_api_python_sdk')))
 sys.path.append(os.path.abspath(os.path.join(project_path, 'src/modules')))
-print("sys.path: "+str(sys.path))
-
 
 # Functions section
 

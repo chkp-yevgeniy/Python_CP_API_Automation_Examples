@@ -12,7 +12,7 @@ import csv
 
 # Get project path
 project_path=pathlib.Path().absolute()
-print("project_path: "+str(project_path))
+#print("project_path: "+str(project_path))
 #exit()
 # Set sys path
 sys.path.append(os.path.abspath(os.path.join(project_path, 'src')))
@@ -32,6 +32,7 @@ def my_main(_conf_d):
   title="Module to get CP service objects"
 
   print("### Start "+title+"###") 
+  #exit()
 
   _conf_d["service_report_file_json"]=os.path.join(_conf_d["reports_folder"], "services.json")
   _conf_d["service_report_file_csv"]=os.path.join(_conf_d["reports_folder"], "services.csv")
