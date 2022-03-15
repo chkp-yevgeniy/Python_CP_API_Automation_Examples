@@ -1,0 +1,3 @@
+- cmd: fw stat | head -n 3
+- cmd: ifconfig | head -n 3
+- cmd: cplic print | head -n 3

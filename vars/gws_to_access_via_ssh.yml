@@ -1,0 +1,4 @@
+- name: External-GW
+  ip: 203.0.113.40
+- name: Internal-GW
+  ip: 203.0.113.81

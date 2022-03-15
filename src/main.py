@@ -29,7 +29,8 @@ import add_services_tcp
 import add_policy_packages
 import get_packages
 import add_rules
-import manage_users
+# import manage_users
+import gws_execute_cmd
 
 
 # Functions section
@@ -79,6 +80,7 @@ def main():
     conf_d["policy_packages_yml"]="vars/policy_packages.yml"
     conf_d["rules_yml"]="vars/rules.yml"
     conf_d["users_yml"]="vars/users.yml"
+    conf_d["gws_to_access_via_ssh_yml"]="vars/gws_to_access_via_ssh.yml"
     # pprint.pprint(conf_d)
     #     
 
@@ -111,9 +113,12 @@ def main():
     # add_rules.my_main(conf_d)
 
 
-    print("--- 60 Manage_users")    
-    manage_users.my_main(conf_d)
+    # print("--- 60 Manage_users")    
+    # manage_users.my_main(conf_d)
 
+    
+    print("--- 70 Execute cmd on gateways")    
+    gws_execute_cmd.my_main(conf_d)
 
     
        
