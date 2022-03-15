@@ -1,5 +1,5 @@
-- layer: "Network"
-  position: 1
+- layer: "my_policy1 Network"
+  position: top
   name: "Rule 1"
   service:
   - "SMTP"

@@ -63,7 +63,10 @@ def my_main(_conf_d):
       print("--- --- 30. Prepare api call")
       api_call_d={}
       api_call_d["name"]="add-access-rule"      
-      api_call_d["body"]=rule_d      
+      api_call_d["body"]=rule_d
+      # api_call_d["body"]["name"]=service_d["name"]
+      # api_call_d["body"]["port"]=service_d["port"]      
+      # api_call_d["body"]["comments"]=service_d["comments"]
       body_json=json.dumps(api_call_d["body"])
       #exit()
 

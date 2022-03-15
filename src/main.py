@@ -28,6 +28,7 @@ import get_services_tcp
 import add_services_tcp
 import add_policy_packages
 import get_packages
+import add_rules
 
 
 # Functions section
@@ -75,6 +76,7 @@ def main():
     # List of gateways to be configurred
     conf_d["gws_list_to_be_conf"]="vars/gws.json"
     conf_d["policy_packages_yml"]="vars/policy_packages.yml"
+    conf_d["rules_yml"]="vars/rules.yml"
     # pprint.pprint(conf_d)
     #     
 
@@ -99,9 +101,19 @@ def main():
     # add_policy_packages.my_main(conf_d)
 
 
-    print("--- 40 Add policy packages")    
-    get_packages.my_main(conf_d)
+    # print("--- 40 Get policy packages")    
+    # get_packages.my_main(conf_d)
 
+
+    # print("--- 50 Add rules")    
+    # add_rules.my_main(conf_d)
+
+
+    print("--- 60 Manage_users")    
+    manage_users.my_main(conf_d)
+
+    
+    
        
 if __name__ == "__main__":
     main()
