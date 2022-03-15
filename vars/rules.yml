@@ -1,0 +1,7 @@
+- layer: "Network"
+  position: 1
+  name: "Rule 1"
+  service:
+  - "SMTP"
+  - "AOL"
+  vpn: "MyIntranet"

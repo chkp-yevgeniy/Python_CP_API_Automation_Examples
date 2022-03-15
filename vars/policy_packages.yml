@@ -1,0 +1,6 @@
+- name: my_policy1
+  access: true
+  comments: my_policy1
+# - name: my_policy2
+#   access: true
+#   comments: my_policy2

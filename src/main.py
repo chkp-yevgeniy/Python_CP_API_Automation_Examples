@@ -26,6 +26,9 @@ sys.path.append(os.path.abspath(os.path.join(project_path, 'src/modules')))
 from cpapi import APIClient, APIClientArgs
 import get_services_tcp
 import add_services_tcp
+import add_policy_packages
+import get_packages
+
 
 # Functions section
 
@@ -62,7 +65,7 @@ def main():
     conf_d["reports_folder"]="collected_data"
     conf_d["report_file_json"]=os.path.join(conf_d["reports_folder"], "gws.json")
     conf_d["report_file_csv"]=os.path.join(conf_d["reports_folder"], "gws.csv")
-
+    
     api_calls_res_d_l=[]
     
     # Set timestamp
@@ -71,6 +74,7 @@ def main():
 
     # List of gateways to be configurred
     conf_d["gws_list_to_be_conf"]="vars/gws.json"
+    conf_d["policy_packages_yml"]="vars/policy_packages.yml"
     # pprint.pprint(conf_d)
     #     
 
@@ -86,9 +90,17 @@ def main():
     # get_services_tcp.my_main(conf_d)
 
 
-    print("--- 20 Add services")    
-    conf_d["services_tcp_yml"]="vars/services_tcp.yml"
-    add_services_tcp.my_main(conf_d)
+    # print("--- 20 Add services")    
+    # conf_d["services_tcp_yml"]="vars/services_tcp.yml"
+    # add_services_tcp.my_main(conf_d)
+
+
+    # print("--- 30 Add policy packages")    
+    # add_policy_packages.my_main(conf_d)
+
+
+    print("--- 40 Add policy packages")    
+    get_packages.my_main(conf_d)
 
        
 if __name__ == "__main__":
