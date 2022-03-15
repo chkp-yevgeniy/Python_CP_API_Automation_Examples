@@ -23,9 +23,25 @@ sys.path.append(os.path.abspath(os.path.join(project_path, 'libs/cp_mgmt_api_pyt
 # # Import CP API lib
 from cpapi import APIClient, APIClientArgs
 import helper
+import run_api_calls_wrapper
 
 # Functions section
 # Functions section end
+
+def read_users(_conf_d, _users_l):
+  # Prepare API calls
+  api_call_d_l=[]
+  api_call_d={}
+  api_call_d["name"]="show-administrators"
+  api_call_d["body"]={}  
+  api_call_d["body"]["offset"]="0"
+  api_call_d["body"]["limit"]="500"
+  api_call_d_l.append(api_call_d)
+  users_d_l=run_api_calls_wrapper.run_api_calls_wrapper(_conf_d, api_call_d_l, _publish=False)
+  pprint.pprint(users_d_l)
+
+
+  #read_users_res_d=run_api_calls_wrapper()
 
 
 def my_main(_conf_d):
@@ -41,11 +57,32 @@ def my_main(_conf_d):
   api_calls_res_d_l=[]
 
 
-  print("--- --- 5. Read file with tcp services to be configured")   
-  rules_l=helper.read_yaml_file(_conf_d["rules_yml"])
-  print("Services to be configured: ")
-  # pprint.pprint(rules_l)
-  # exit()  
+  print("--- --- 5. Read file with users to be configured")   
+  users_l=helper.read_yaml_file(_conf_d["users_yml"])
+  print("Users to be configured: ")
+  pprint.pprint(users_l)
+  #exit()  
+
+  print("--- --- 10. Read configured users on MGMT")
+  read_users(_conf_d, users_l)
+  exit()
+
+
+
+  print("--- --- 20. Read users")
+
+
+
+  print("--- --- 30. Get users to be del")
+
+
+
+  print("--- --- 40. Get users to be add")
+
+
+
+  exit()
+
 
 
   # Get API client object

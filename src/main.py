@@ -29,6 +29,7 @@ import add_services_tcp
 import add_policy_packages
 import get_packages
 import add_rules
+import manage_users
 
 
 # Functions section
@@ -77,6 +78,7 @@ def main():
     conf_d["gws_list_to_be_conf"]="vars/gws.json"
     conf_d["policy_packages_yml"]="vars/policy_packages.yml"
     conf_d["rules_yml"]="vars/rules.yml"
+    conf_d["users_yml"]="vars/users.yml"
     # pprint.pprint(conf_d)
     #     
 
@@ -112,7 +114,7 @@ def main():
     print("--- 60 Manage_users")    
     manage_users.my_main(conf_d)
 
-    
+
     
        
 if __name__ == "__main__":
