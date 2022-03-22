@@ -117,8 +117,8 @@ def main():
     # manage_users.my_main(conf_d)
 
     
-    print("--- 70 Execute cmd on gateways")    
-    gws_execute_cmd.my_main(conf_d)
+    # print("--- 70 Execute cmd on gateways")    
+    # gws_execute_cmd.my_main(conf_d)
 
     
        

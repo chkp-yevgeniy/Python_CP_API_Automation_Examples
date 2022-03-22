@@ -105,6 +105,7 @@ def main():
       print("### Execute api call")
       api_res_d = client.api_call(api_call_d["name"], body_json)
       # pprint.pprint(api_res_d)
+      # exit()
       if api_res_d.success:
         print("   API call successfull")
       else: 
