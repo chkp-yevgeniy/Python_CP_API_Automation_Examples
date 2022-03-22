@@ -101,20 +101,14 @@ def main():
     # add_services_tcp.my_main(conf_d)
 
 
-    # print("--- 30 Add policy packages")    
-    # add_policy_packages.my_main(conf_d)
+    # print("--- 30 Get policy packages")    
 
 
-    # print("--- 40 Get policy packages")    
-    # get_packages.my_main(conf_d)
+    # print("--- 40 Add policy packages")    
 
 
     # print("--- 50 Add rules")    
-    # add_rules.my_main(conf_d)
 
-
-    # print("--- 60 Manage_users")    
-    # manage_users.my_main(conf_d)
 
     
     # print("--- 70 Execute cmd on gateways")    
