@@ -25,16 +25,15 @@ sys.path.append(os.path.abspath(os.path.join(project_path, 'libs/cp_mgmt_api_pyt
 from cpapi import APIClient, APIClientArgs
 import helper
 
+
 # Functions section
 # Functions section end
-
 
 def my_main(_conf_d):
   title="Module to excute cmd on gateways"
 
   print("### Start "+title+"###") 
-  #exit()
-
+  
 
   print("--- --- 10. Read file with tcp services to be configured")   
   gws_l=helper.read_yaml_file(_conf_d["gws_to_access_via_ssh_yml"])
@@ -49,7 +48,7 @@ def my_main(_conf_d):
     print("--- --- SSH to the gateway: "+str(gw_d))
     ssh=paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(gw_d["ip"],"22","admin","vpn123")
+    ssh.connect(gw_d["ip"],"22","admin", _conf_d["ssh_pwd"])
 
     for cmd_d in cmds_l:
       print("Run following command via ssh: "+cmd_d["cmd"])      

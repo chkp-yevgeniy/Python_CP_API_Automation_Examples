@@ -45,18 +45,18 @@ def fill_api_calls_res(_api_calls_res_d_l, _api_call_d, _api_res_d_success):
 
 # Functions section end
 
-
 def main():
     
     # Timestamp
     cur_date_time_YMD_HMS=os.popen('date +%Y%m%d_%H%M%S').read().strip()      
 
     # Variables 
-    conf_d={}
-    conf_d["mgmt_ip"]="203.0.113.80"
-    conf_d["mgmt_user"]="api_user"
-    conf_d["mgmt_pwd"]="vpn123"
-    conf_d["domain"]=""
+    conf_d={}       
+    # Put here ip address and credentials of your management server 
+    conf_d["mgmt_ip"]=""
+    conf_d["mgmt_user"]=""
+    conf_d["mgmt_pwd"]=""    
+    conf_d["domain"]=""    
     conf_d["reports_folder"]="collected_data"
     conf_d["report_file_json"]=os.path.join(conf_d["reports_folder"], "gws.json")
     conf_d["report_file_csv"]=os.path.join(conf_d["reports_folder"], "gws.csv")

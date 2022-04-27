@@ -59,10 +59,11 @@ def main():
     cur_date_time_YMD_HMS=os.popen('date +%Y%m%d_%H%M%S').read().strip()  
     
     # Variables 
-    conf_d={}
-    conf_d["mgmt_ip"]="203.0.113.80"
-    conf_d["mgmt_user"]="api_user"
-    conf_d["mgmt_pwd"]="vpn123"
+    conf_d={}    
+    # Put here ip address and credentials of your management server 
+    conf_d["mgmt_ip"]=""
+    conf_d["mgmt_user"]=""
+    conf_d["mgmt_pwd"]=""    
     conf_d["domain"]=""
     conf_d["reports_folder"]="collected_data"
     conf_d["report_file_json"]=os.path.join(conf_d["reports_folder"], "gws.json")
@@ -91,6 +92,8 @@ def main():
       login_res = client.login(conf_d["mgmt_user"], conf_d["mgmt_pwd"], domain=conf_d["domain"])    
       # _domain_d["api_login_ok"]=login_res.success  
       # _domain_d["api_calls"]=[]
+      # pprint.pprint(login_res.success)
+      # exit()
       
       print("### Login on target {} {} {} {}".format(conf_d["mgmt_user"], conf_d["domain"], conf_d["mgmt_ip"], str(login_res.success)))      
 
@@ -106,10 +109,13 @@ def main():
       api_res_d = client.api_call(api_call_d["name"], body_json)
       # pprint.pprint(api_res_d)
       # exit()
+      # exit()
       if api_res_d.success:
         print("   API call successfull")
       else: 
         print("   ERROR: API call failed")
+
+
 
 
     print("### Process on result")

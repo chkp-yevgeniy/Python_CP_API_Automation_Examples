@@ -26,9 +26,9 @@ sys.path.append(os.path.abspath(os.path.join(project_path, 'src/modules')))
 from cpapi import APIClient, APIClientArgs
 import get_services_tcp
 import add_services_tcp
-import add_policy_packages
-import get_packages
-import add_rules
+#import add_policy_packages
+#import get_packages
+# import add_rules
 # import manage_users
 import gws_execute_cmd
 
@@ -61,10 +61,12 @@ def main():
 
     # Variables 
     conf_d={}
-    conf_d["mgmt_ip"]="203.0.113.80"
-    conf_d["mgmt_user"]="api_user"
-    conf_d["mgmt_pwd"]="vpn123"
+    # Put here ip address and credentials of your management server 
+    conf_d["mgmt_ip"]=""
+    conf_d["mgmt_user"]=""
+    conf_d["mgmt_pwd"]=""    
     conf_d["domain"]=""
+    conf_d["ssh_pwd"]=""
     conf_d["reports_folder"]="collected_data"
     conf_d["report_file_json"]=os.path.join(conf_d["reports_folder"], "gws.json")
     conf_d["report_file_csv"]=os.path.join(conf_d["reports_folder"], "gws.csv")
@@ -108,7 +110,6 @@ def main():
 
 
     # print("--- 50 Add rules")    
-
 
     
     # print("--- 70 Execute cmd on gateways")    
